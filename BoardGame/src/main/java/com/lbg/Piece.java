@@ -5,7 +5,7 @@ public class Piece {
 
     private int[] position = new int[2]; //[xpos,ypos]
 
-    protected int[] genRandomPosition(int[] BoardSize) {
+    public int[] genRandomPosition(int[] BoardSize) {
         Random random = new Random();
         int[] newPosition = new int[2];
         for(int i =0;i<2;i++){
