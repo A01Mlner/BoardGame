@@ -14,14 +14,13 @@ public class Board {
 
     public Board(int[] boardSize){
         this.boardSize = boardSize;
-        this.boardState = new String[boardSize[0]][boardSize[1]];
+        this.boardState = new String[boardSize[1]][boardSize[0]];
         initializeBoard();
     }
 
-    // TODO swap x and y around
     private void initializeBoard(){
-        for (int i = 0; i < boardSize[0]; i++) {
-            for (int j = 0; j < boardSize[1]; j++) {
+        for (int i = 0; i < boardSize[1]; i++) {
+            for (int j = 0; j < boardSize[0]; j++) {
                 boardState[i][j] = "X";
             }
         }
@@ -30,8 +29,8 @@ public class Board {
 
     public void printBoardState(){
 
-        for (int i=0; i < boardSize[0]; i++){
-            for (int j=0; j < boardSize[1]; j++){
+        for (int i=0; i < boardSize[1]; i++){
+            for (int j=0; j < boardSize[0]; j++){
                 if (!boardState[i][j].equals("h") && !boardState[i][j].equals("mf")){
                     System.out.print(boardState[i][j] + " ");
                 } else {
@@ -41,6 +40,4 @@ public class Board {
             System.out.println();
         }
     }
-
-
 }

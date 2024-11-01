@@ -7,10 +7,9 @@ public class Main {
         boolean gameState = true;
 
         // Takes the boundaries from user input and initializes the board
-        int[] boardSize = {getUserInput('x'), getUserInput('y')};
+        int[] boardSize = {getUserBoundaryInput('x'), getUserBoundaryInput('y')};
         Board board = new Board(boardSize);
         board.printBoardState();
-
         // Add Pieces
 
 
@@ -18,7 +17,10 @@ public class Main {
         while (gameState){
 
             // Prints Board State from user perspective
-            board.printBoardState(board, boardSize);
+            board.printBoardState();
+
+
+
 
 
             // boolean treasureFound =
@@ -35,11 +37,18 @@ public class Main {
     }
 
 
-    public static int getUserInput(char boundaryType){
+    public static int getUserBoundaryInput(char boundaryType){
         String formattedString = String.format("Input %s boundary value:", boundaryType);
         System.out.println(formattedString);
         Scanner numberInputScanner = new Scanner(System.in);
         int scannerValue = numberInputScanner.nextInt();
         return scannerValue;
+    }
+
+
+    public static int getUserMovementInput(){
+        Scanner movementInputScanner = new Scanner(System.in);
+        String movementDirection = movementInputScanner.nextLine();
+        return 0;
     }
 }
