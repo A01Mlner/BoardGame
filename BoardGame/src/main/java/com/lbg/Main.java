@@ -66,7 +66,8 @@ public class Main {
                 break;
             default:
                 System.out.println("Input direction not valid");
-                break;
         }
+        
+        movementInputScanner.close();
     }
 }
