@@ -46,9 +46,27 @@ public class Main {
     }
 
 
-    public static int getUserMovementInput(){
+    public static void getUserMovementInput(){
         Scanner movementInputScanner = new Scanner(System.in);
         String movementDirection = movementInputScanner.nextLine();
-        return 0;
+        System.out.println("Input a direction to move to (w, a, s, d) or (up, down, left, right)");
+
+        switch (movementDirection) {
+            case "w", "up":
+                moveUp();
+                break;
+            case "s", "down":
+                moveDown();
+                break;
+            case "a", "left":
+                moveLeft();
+                break;
+            case "d", "right":
+                moveRight();
+                break;
+            default:
+                System.out.println("Input direction not valid");
+                break;
+        }
     }
 }
