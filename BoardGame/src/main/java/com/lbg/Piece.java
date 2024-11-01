@@ -1,7 +1,7 @@
 package com.lbg;
 import java.util.Random;
 
-public  class Piece {
+public class Piece {
 
     private int[] position = new int[2]; //[xpos,ypos]
 
@@ -19,7 +19,7 @@ public  class Piece {
         return position;
     }
 
-    void setPosition(int[] position) {
+    public void setPosition(int[] position) {
         this.position = position;
     }
 
